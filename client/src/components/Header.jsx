@@ -1,84 +1,114 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Play } from 'lucide-react';
+
+const navLinks = [
+  { href: '/games', label: 'Games' },
+  { href: '/about', label: 'About' },
+];
 
 export default function Header() {
-  // State to track if the page has been scrolled
   const [isScrolled, setIsScrolled] = useState(false);
-  // State to manage the mobile menu's visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // Hook from react-router-dom to get the current URL path
   const location = useLocation();
 
-  // Effect to add a scroll listener when the component mounts
   useEffect(() => {
-    const handleScroll = () => {
-      // Set isScrolled to true if user has scrolled more than 50px
-      setIsScrolled(window.scrollY > 50);
-    };
-    // Add the listener
-    window.addEventListener('scroll', handleScroll);
-    // Clean up the listener when the component unmounts
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Function to handle navigation clicks, primarily for closing the mobile menu
-  const handleNavClick = () => {
-    setIsMenuOpen(false);
-  };
+  // close the panel on navigation, and lock the page behind it
+  useEffect(() => setIsMenuOpen(false), [location.pathname]);
 
-  // Array of navigation links to keep the code clean
-  const navLinks = [
-    { href: '/forge', label: 'The Forge' },
-    { href: '/showroom', label: 'The Showroom' },
-    { href: '/about', label: 'About Us' },
-  ];
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && setIsMenuOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full p-4 md:p-6 z-50">
-        <nav className={`container mx-auto flex justify-between items-center bg-base/50 backdrop-blur-md p-4 rounded-xl border transition-all duration-300 ${isScrolled ? 'border-border' : 'border-transparent'}`}>
-
-          {/* Logo */}
-          <Link to="/" onClick={handleNavClick} className="text-3xl font-heading tracking-wider">
-            <span className="text-text-primary">E</span><span className="text-text-secondary">nclope</span>
+      <header className="fixed left-0 top-0 z-50 w-full p-4 md:p-6">
+        <nav
+          className={`container mx-auto flex items-center justify-between rounded-xl border p-3 pl-5 transition-all duration-300 md:p-4 md:pl-6 ${
+            isScrolled
+              ? 'border-border bg-base/80 shadow-2xl shadow-black/40 backdrop-blur-md'
+              : 'border-transparent bg-base/40 backdrop-blur-md'
+          }`}
+        >
+          <Link to="/" className="font-heading text-2xl tracking-wider sm:text-3xl">
+            <span className="text-text-primary">E</span>
+            <span className="text-text-secondary">nclop</span>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-10 text-sm">
-            {navLinks.map(link => (
-              <Link key={link.href} to={link.href} className={`hover:text-text-primary transition-colors ${location.pathname === link.href ? 'text-text-primary' : ''}`}>
+          {/* desktop */}
+          <div className="hidden items-center gap-10 text-sm md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`nav-link ${
+                  location.pathname === link.href ? 'text-text-primary' : ''
+                }`}
+              >
                 {link.label}
               </Link>
             ))}
-            <Link to="/apply" className="btn-primary px-6 py-2 rounded-full">
-              Apply to Join
-            </Link>
+            <a
+              href="/camocrew/"
+              className="btn-primary inline-flex min-h-[44px] items-center gap-2 rounded-full"
+            >
+              <Play size={14} />
+              Play Camo Crew
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-text-primary z-50">
-            {/* Simple hamburger/close icon SVG */}
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8h16M4 16h16" />
-              )}
-            </svg>
+          {/* mobile toggle */}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((v) => !v)}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            className="z-50 flex h-11 w-11 items-center justify-center rounded-lg text-text-primary md:hidden"
+          >
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </nav>
       </header>
 
-      {/* Mobile Menu Panel */}
-      <div id="mobile-menu" className={`fixed top-0 left-0 w-full h-full bg-base/90 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-10 text-2xl transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        {navLinks.map(link => (
-          <Link key={link.href} to={link.href} onClick={handleNavClick} className="hover:text-text-primary transition-colors">
+      {/* mobile panel */}
+      <div
+        id="mobile-menu"
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-9 bg-base/95 text-2xl backdrop-blur-md transition-transform duration-300 md:hidden ${
+          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            to={link.href}
+            className="transition-colors hover:text-text-primary"
+          >
             {link.label}
           </Link>
         ))}
-        <Link to="/apply" onClick={handleNavClick} className="btn-primary px-8 py-3 rounded-full mt-4">
-          Apply to Join
-        </Link>
+        <a
+          href="/camocrew/"
+          className="btn-primary mt-2 inline-flex min-h-[48px] items-center gap-2 rounded-full text-base"
+        >
+          <Play size={16} />
+          Play Camo Crew
+        </a>
       </div>
     </>
   );

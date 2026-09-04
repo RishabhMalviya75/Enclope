@@ -1,0 +1,9 @@
+# ads.txt — Enclop (enclop.com)
+# Authorises which ad systems may sell inventory on this WEBSITE (IAB spec).
+# This is the site-level file. The separate app-ads.txt in this same directory
+# covers our mobile apps (Camo Crew, com.enclop.crewcamo) — keep the two apart.
+#
+# Google AdSense uses this file to verify site ownership, so the publisher ID
+# below must match the AdSense account claiming enclop.com.
+
+google.com, pub-6917071068772006, DIRECT, f08c47fec0942fa0

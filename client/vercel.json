@@ -1,0 +1,28 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "redirects": [
+    {
+      "source": "/camocrew",
+      "destination": "/camocrew/",
+      "permanent": false
+    },
+    {
+      "source": "/camocrew/delete-my-data",
+      "destination": "https://backend-camo-production.up.railway.app/delete-my-data",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/camocrew/",
+      "destination": "/camocrew/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

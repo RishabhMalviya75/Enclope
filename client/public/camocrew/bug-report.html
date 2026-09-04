@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CAMO CREW | Bug Report</title>
+
+<meta name="description" content="Report a bug in Camo Crew — tell us your device, what happened, and how to reproduce it.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/bg6.webp" type="image/webp">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Camo Crew">
+<meta property="og:title" content="CAMO CREW | Bug Report">
+<meta property="og:description" content="Report a bug in Camo Crew — tell us your device, what happened, and how to reproduce it.">
+<meta property="og:image" content="box1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CAMO CREW | Bug Report">
+<meta name="twitter:description" content="Report a bug in Camo Crew — tell us your device, what happened, and how to reproduce it.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="assets/style.css">
+
+<style>body::before{background-image:linear-gradient(rgba(9,9,9,.84),rgba(9,9,9,.93)),url("assets/img/bg2.webp")}</style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <img src="assets/img/bg6.webp" alt="Camo Crew logo" width="140" height="303">
+  <div class="logo-text" style="font-size:2rem">CAMO CREW</div>
+  <div class="loader-line"><div class="loader-fill"></div></div>
+  <p style="margin-top:15px;color:#aaa;font-size:.75rem;letter-spacing:2px">LOADING GAME WORLD...</p>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-brand">
+    <button class="menu-btn" id="menuToggle" type="button"><i class="fas fa-bars"></i></button>
+    <span class="logo-text">CAMO CREW</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gameplay.html">Gameplay</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="beta.html">Play</a></li>
+    <li><a href="roadmap.html">Roadmap</a></li>
+  </ul>
+  <a href="https://play.google.com/store/apps/details?id=com.enclop.crewcamo" class="btn-outline" target="_blank" rel="noopener">PLAY NOW</a>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <span class="logo-text">MENU</span>
+    <button class="sidebar-close" id="sidebarClose" type="button" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  </div>
+  <ul class="sidebar-menu">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="gameplay.html"><i class="fas fa-gamepad"></i> Gameplay</a></li>
+    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+    <li><a href="beta.html"><i class="fas fa-rocket"></i> Play</a></li>
+    <li><a href="roadmap.html"><i class="fas fa-map"></i> Roadmap</a></li>
+    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+    <li><a href="bug-report.html" class="active"><i class="fas fa-bug"></i> Bug Report</a></li>
+    <li><a href="changelog.html"><i class="fas fa-history"></i> Changelog</a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+</aside>
+
+<div class="container">
+
+<section class="page-header">
+  <h1>Report A Bug</h1>
+  <p>Something broken, stuck or crashing? Tell us what happened and what phone you are on — that is what makes it fixable.</p>
+</section>
+
+<div class="report-card" data-reveal>
+  <div class="success-alert" id="successAlert">
+    <i class="fas fa-check-circle"></i> Thanks — your report has been noted. For a faster reply, post it in Discord too.
+  </div>
+
+  <form id="bugReportForm" data-local-form novalidate>
+    <div class="form-group">
+      <label for="playerName">Your in-game name</label>
+      <input type="text" id="playerName" name="playerName" class="form-control"
+             placeholder="e.g. ShadowFox" autocomplete="nickname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="deviceModel">Phone model &amp; Android version</label>
+      <input type="text" id="deviceModel" name="deviceModel" class="form-control"
+             placeholder="e.g. Redmi Note 12 / Android 14" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bugCategory">What kind of problem?</label>
+      <select id="bugCategory" name="bugCategory" class="form-control" required>
+        <option value="" disabled selected>Select one...</option>
+        <option value="multiplayer">Multiplayer / disconnects</option>
+        <option value="paint">Paint tools</option>
+        <option value="controls">Touch controls &amp; UI</option>
+        <option value="crash">Crash or bad performance</option>
+        <option value="audio">Voice chat or sound</option>
+        <option value="purchase">Purchases &amp; coins</option>
+        <option value="other">Something else</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="bugDescription">What happened, and how do we make it happen again?</label>
+      <textarea id="bugDescription" name="bugDescription" class="form-control"
+                placeholder="Describe the problem and the steps that led to it..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">SUBMIT REPORT</button>
+  </form>
+
+  <p style="margin-top:18px;font-size:.86rem;color:#9b9b9b;text-align:center">
+    This form is a fan-site draft helper — it does not send anywhere yet. Please also post your report in
+    <a href="https://discord.com/invite/6DfUdzdFw" target="_blank" rel="noopener" style="color:var(--accent)">Discord</a>
+    or email <a href="mailto:app.enclop@gmail.com" style="color:var(--accent)">app.enclop@gmail.com</a>.
+  </p>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div>
+      <span class="logo-text">CAMO CREW</span>
+      <p style="color:#999;margin-top:10px;max-width:320px;font-size:.9rem">
+        A mobile multiplayer hide-and-seek game where you paint your own body to blend into the world.
+      </p>
+    </div>
+    <div class="socials">
+      <a href="https://play.google.com/store/apps/details?id=com.enclop.crewcamo" target="_blank" rel="noopener" title="Google Play" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
+      <a href="https://discord.com/invite/6DfUdzdFw" target="_blank" rel="noopener" title="Discord" aria-label="Discord"><i class="fab fa-discord"></i></a>
+      <a href="https://www.instagram.com/_enclop" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="copyright">© 2026 CAMO CREW — ENCLOP GAME STUDIO</div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

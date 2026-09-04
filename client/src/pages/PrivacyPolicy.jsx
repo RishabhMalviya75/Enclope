@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
                     <motion.section variants={fadeInUp}>
                         <h2 className="text-2xl font-heading text-white mb-4">Introduction</h2>
                         <p>
-                            Welcome to Enclope ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                            Welcome to Enclop ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                         </p>
                     </motion.section>
 
@@ -143,7 +143,7 @@ export default function PrivacyPolicyPage() {
                             If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
                         </p>
                         <div className="p-6 rounded-xl border border-white/10 bg-white/5">
-                            <p className="text-white font-semibold mb-2">Enclope</p>
+                            <p className="text-white font-semibold mb-2">Enclop</p>
                             <p>Email: <a href="mailto:info@enclop.com" className="text-accent hover:underline">info@enclop.com</a></p>
                         </div>
                     </motion.section>

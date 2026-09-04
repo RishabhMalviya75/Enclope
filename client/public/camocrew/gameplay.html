@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CAMO CREW | Gameplay</title>
+
+<meta name="description" content="How Camo Crew plays: paint your body to blend in, four game modes, five maps, emotes, voice chat and the whistle.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/bg6.webp" type="image/webp">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Camo Crew">
+<meta property="og:title" content="CAMO CREW | Gameplay">
+<meta property="og:description" content="How Camo Crew plays: paint your body to blend in, four game modes, five maps, emotes, voice chat and the whistle.">
+<meta property="og:image" content="box1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CAMO CREW | Gameplay">
+<meta name="twitter:description" content="How Camo Crew plays: paint your body to blend in, four game modes, five maps, emotes, voice chat and the whistle.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="assets/style.css">
+
+<style>body::before{background-image:linear-gradient(rgba(9,9,9,.84),rgba(9,9,9,.93)),url("assets/img/bg2.webp")}</style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <img src="assets/img/bg6.webp" alt="Camo Crew logo" width="140" height="303">
+  <div class="logo-text" style="font-size:2rem">CAMO CREW</div>
+  <div class="loader-line"><div class="loader-fill"></div></div>
+  <p style="margin-top:15px;color:#aaa;font-size:.75rem;letter-spacing:2px">LOADING GAME WORLD...</p>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-brand">
+    <button class="menu-btn" id="menuToggle" type="button"><i class="fas fa-bars"></i></button>
+    <span class="logo-text">CAMO CREW</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gameplay.html" class="active">Gameplay</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="beta.html">Play</a></li>
+    <li><a href="roadmap.html">Roadmap</a></li>
+  </ul>
+  <a href="https://play.google.com/store/apps/details?id=com.enclop.crewcamo" class="btn-outline" target="_blank" rel="noopener">PLAY NOW</a>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <span class="logo-text">MENU</span>
+    <button class="sidebar-close" id="sidebarClose" type="button" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  </div>
+  <ul class="sidebar-menu">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="gameplay.html" class="active"><i class="fas fa-gamepad"></i> Gameplay</a></li>
+    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+    <li><a href="beta.html"><i class="fas fa-rocket"></i> Play</a></li>
+    <li><a href="roadmap.html"><i class="fas fa-map"></i> Roadmap</a></li>
+    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+    <li><a href="bug-report.html"><i class="fas fa-bug"></i> Bug Report</a></li>
+    <li><a href="changelog.html"><i class="fas fa-history"></i> Changelog</a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+</aside>
+
+<div class="container">
+
+<section class="page-header">
+  <h1>How It Plays</h1>
+  <p>Paint yourself into the scenery, or hunt down the people who did. Here is everything in the game.</p>
+</section>
+
+<div class="mechanics-box" data-reveal>
+  <h3>About The Game</h3>
+  <p>
+    Camo Crew is a mobile multiplayer hide-and-seek game. At the start of a round you are either a
+    <strong>hider</strong> or a <strong>seeker</strong>. Hiders get a paint kit and a short hide phase:
+    open the paint view, rotate and pinch-zoom around your own character, and colour your body to match
+    the surface you plan to press yourself against. Seekers spawn in first person and sweep the map with
+    paintballs, looking for the one patch of wall that is slightly the wrong shade.
+  </p>
+  <p>
+    Rounds are short, lobbies are quick, and every match runs on a live server so a friend can drop into
+    your private room with a code — or you can matchmake into a public one.
+  </p>
+</div>
+
+<div class="features-grid">
+  <div class="feature-card" data-reveal>
+    <i class="fas fa-paintbrush"></i>
+    <h3>Paint Your Body</h3>
+    <p>A real paint tool, not a preset skin. Four brush sizes, step-by-step undo, and an eyedropper that lifts the exact colour off the surface behind you.</p>
+  </div>
+  <div class="feature-card" data-reveal>
+    <i class="fas fa-person-running"></i>
+    <h3>Climb, Grab &amp; Go Prone</h3>
+    <p>Jump at a wall your head can reach and you stick to it, then climb. Lie flat to disappear under furniture and along ledges.</p>
+  </div>
+  <div class="feature-card" data-reveal>
+    <i class="fas fa-volume-high"></i>
+    <h3>The Whistle</h3>
+    <p>Taunt the seekers with a whistle — but it is real 3D positional sound, so it tells them exactly which direction you are in.</p>
+  </div>
+  <div class="feature-card" data-reveal>
+    <i class="fas fa-microphone"></i>
+    <h3>Voice Chat</h3>
+    <p>Talk to the room from the lobby onward, with per-player mute and volume. Coordinating out loud is half the fun — and half the risk.</p>
+  </div>
+  <div class="feature-card" data-reveal>
+    <i class="fas fa-masks-theater"></i>
+    <h3>Emotes &amp; Dances</h3>
+    <p>Eleven emotes and six looping dances, unlockable with coins. Perfect for celebrating in front of a seeker who still cannot see you.</p>
+  </div>
+  <div class="feature-card" data-reveal>
+    <i class="fas fa-user-ninja"></i>
+    <h3>Characters &amp; Skins</h3>
+    <p>Pick your hider body in the lobby, resize it to squeeze into tighter gaps, and kit your seeker out from the skins shop.</p>
+  </div>
+</div>
+
+<div class="mechanics-box" data-reveal style="margin-top:50px">
+  <h3>Four Game Modes</h3>
+  <ul class="timeline-checklist" style="margin-top:6px">
+    <li><i class="fas fa-eye-slash"></i> <span><strong>Classic</strong> — hide, blend, survive the clock.</span></li>
+    <li><i class="fas fa-ghost"></i> <span><strong>Hunt</strong> — caught hiders become ghosts and spectate the seekers' point of view.</span></li>
+    <li><i class="fas fa-viruses"></i> <span><strong>Infection</strong> — every hider tagged switches sides, so the hunt snowballs.</span></li>
+    <li><i class="fas fa-brain"></i> <span><strong>Reverse Chicken Race</strong> — study each hider on a pedestal, then find them out in the map.</span></li>
+  </ul>
+</div>
+
+<div class="mechanics-box" data-reveal>
+  <h3>Five Maps</h3>
+  <ul class="timeline-checklist" style="margin-top:6px">
+    <li><i class="fas fa-wheat-awn"></i> <span><strong>Farm</strong> — barns, hay and open ground. Nowhere to be lazy.</span></li>
+    <li><i class="fas fa-house-chimney-crack"></i> <span><strong>Haunted House</strong> — dark rooms, heavy furniture and long sightlines.</span></li>
+    <li><i class="fas fa-cubes"></i> <span><strong>Minecraft Village</strong> — blocky buildings, flat colours, brutally good camouflage.</span></li>
+    <li><i class="fas fa-seedling"></i> <span><strong>Minecraft Garden</strong> — greenery everywhere, if you get the shade right.</span></li>
+    <li><i class="fas fa-door-open"></i> <span><strong>Backrooms</strong> — endless yellow corridors where every wall looks the same.</span></li>
+  </ul>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div>
+      <span class="logo-text">CAMO CREW</span>
+      <p style="color:#999;margin-top:10px;max-width:320px;font-size:.9rem">
+        A mobile multiplayer hide-and-seek game where you paint your own body to blend into the world.
+      </p>
+    </div>
+    <div class="socials">
+      <a href="https://play.google.com/store/apps/details?id=com.enclop.crewcamo" target="_blank" rel="noopener" title="Google Play" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
+      <a href="https://discord.com/invite/6DfUdzdFw" target="_blank" rel="noopener" title="Discord" aria-label="Discord"><i class="fab fa-discord"></i></a>
+      <a href="https://www.instagram.com/_enclop" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="copyright">© 2026 CAMO CREW — ENCLOP GAME STUDIO</div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

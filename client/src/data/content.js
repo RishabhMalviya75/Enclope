@@ -1,160 +1,63 @@
-// Legacy services array (keeping for backward compatibility if needed elsewhere)
-export const services = [];
+// --- ENCLOP: real studio data ---------------------------------------------
+// Everything here must be true. No placeholders.
 
-// New 3-Category Structure for The Forge
-export const forgeCategories = [
-  {
-    id: 'forge',
-    name: 'Forge',
-    tagline: 'We Build',
-    description: 'Custom digital products engineered for performance',
-    services: [
-      {
-        id: 'saas',
-        title: 'SaaS Applications',
-        desc: 'Scalable software platforms built from the ground up',
-        longDesc: 'We engineer Software-as-a-Service platforms designed to scale with your ambitions. From MVP to enterprise-ready.',
-        tools: ['React', 'Node.js', 'PostgreSQL', 'AWS']
-      },
+export const studio = {
+  name: 'Enclop',
+  tagline: 'We make games people actually play.',
+  blurb:
+    'A small independent studio. We build the strange, ambitious things we want to play ourselves — then we ship them, put them in real players hands, and keep patching until they feel right.',
+  play: 'https://play.google.com/store/apps/details?id=com.enclop.crewcamo',
+  discord: 'https://discord.com/invite/6DfUdzdFw',
+  instagram: 'https://www.instagram.com/_enclop',
+  email: 'app.enclop@gmail.com',
+};
 
-      {
-        id: 'landing',
-        title: 'Landing Pages',
-        desc: 'High-converting web pages that capture leads',
-        longDesc: 'Conversion-optimized landing pages designed to turn visitors into customers.',
-        tools: ['Next.js', 'Tailwind', 'Framer Motion']
-      },
-      {
-        id: 'management',
-        title: 'Management Systems',
-        desc: 'Business workflow and productivity apps',
-        longDesc: 'Custom internal tools and management dashboards that streamline your operations.',
-        tools: ['React', 'Node.js', 'MongoDB', 'Redis']
-      },
-      {
-        id: 'iot',
-        title: 'IoT Products',
-        desc: 'Connected device solutions',
-        longDesc: 'End-to-end IoT product development from hardware integration to cloud dashboards.',
-        tools: ['Arduino', 'Raspberry Pi', 'MQTT', 'AWS IoT']
-      }
-    ]
-  },
+export const games = [
   {
-    id: 'craft',
-    name: 'Craft',
-    tagline: 'We Design',
-    description: 'Visual experiences that captivate and convert',
-    services: [
-      {
-        id: 'uiux',
-        title: 'UI/UX Redesign',
-        desc: 'Interface transformation for better conversions',
-        longDesc: 'Complete user experience overhauls grounded in research and modern design principles.',
-        tools: ['Figma', 'Adobe XD', 'Framer', 'Spline']
-      },
-      {
-        id: 'templates',
-        title: 'Templates',
-        desc: 'Ready-to-use professional designs',
-        longDesc: 'Custom templates for websites, presentations, and marketing materials.',
-        tools: ['Figma', 'Canva', 'Notion']
-      },
-      {
-        id: 'catalogs',
-        title: 'Brand Catalogs',
-        desc: 'Print & digital product catalogs',
-        longDesc: 'Beautiful product catalogs that showcase your offerings in the best light.',
-        tools: ['InDesign', 'Illustrator', 'Figma']
-      },
-      {
-        id: 'creatives',
-        title: 'WhatsApp Creatives',
-        desc: 'Marketing visuals for messaging',
-        longDesc: 'Eye-catching graphics optimized for WhatsApp and social sharing.',
-        tools: ['Photoshop', 'Canva', 'Figma']
-      }
-    ]
-  },
-  {
-    id: 'amplify',
-    name: 'Amplify',
-    tagline: 'We Market',
-    description: 'Strategies that grow your reach and revenue',
-    services: [
-      {
-        id: 'email',
-        title: 'Email Campaigns',
-        desc: 'Automated email marketing that converts',
-        longDesc: 'Data-driven email sequences that nurture leads and drive sales.',
-        tools: ['Mailchimp', 'HubSpot', 'Klaviyo']
-      },
-      {
-        id: 'social',
-        title: 'Social Media',
-        desc: 'Full social presence management',
-        longDesc: 'Content creation, scheduling, and engagement across all major platforms.',
-        tools: ['Meta Business', 'Buffer', 'Canva']
-      },
-      {
-        id: 'seo',
-        title: 'SEO Optimization',
-        desc: 'Search visibility that drives traffic',
-        longDesc: 'Technical SEO, content strategy, and link building for organic growth.',
-        tools: ['SEMrush', 'Ahrefs', 'Google Search Console']
-      },
-      {
-        id: 'whatsapp',
-        title: 'WhatsApp Campaigns',
-        desc: 'Direct messaging that reaches customers',
-        longDesc: 'Broadcast campaigns and automated responses for WhatsApp Business.',
-        tools: ['WhatsApp Business API', 'Twilio']
-      }
-    ]
-  }
-];
-
-export const projects = [
-  {
-    img: 'https://placehold.co/800x600/0A0A0A/EAEAEA?text=Project+Alpha',
-    title: 'Project Alpha',
-    desc: 'A cutting-edge SaaS platform for data analytics, delivered on time and on budget.'
-  },
-  {
-    img: 'https://placehold.co/800x600/0A0A0A/EAEAEA?text=Project+Beta',
-    title: 'Project Beta',
-    desc: 'A digital marketing campaign that drove a 200% return on investment for a major e-commerce brand.'
-  },
-  {
-    img: 'https://placehold.co/800x600/0A0A0A/EAEAEA?text=Project+Gamma',
-    title: 'Project Gamma',
-    desc: 'A sleek, intuitive mobile application for a community-based startup.'
-  },
-  {
-    img: 'https://placehold.co/800x600/0A0A0A/EAEAEA?text=Project+Delta',
-    title: 'Project Delta',
-    desc: 'A complete UI/UX overhaul for a legacy enterprise system, improving user satisfaction by 40%.'
+    id: 'camo-crew',
+    title: 'Camo Crew',
+    status: 'Out now',
+    platform: 'Android · Google Play',
+    tagline: 'Paint yourself into the wall. Hope nobody looks twice.',
+    description:
+      'A mobile multiplayer hide-and-seek game with one twist that changes everything: you paint your own body. Pick a brush, lift the exact colour off the bricks behind you with the eyedropper, and become part of the scenery — while the seekers sweep the map in first person looking for the one patch that is slightly the wrong shade.',
+    facts: [
+      { value: '5', label: 'Maps' },
+      { value: '4', label: 'Game modes' },
+      { value: '3K+', label: 'Players' },
+    ],
+    features: [
+      'Real paint tools — brush sizes, undo, eyedropper',
+      'Classic, Hunt, Infection and Reverse Chicken Race',
+      'Private rooms with a join code, plus matchmaking',
+      'In-game voice chat with your crew',
+    ],
+    image: '/camocrew/assets/img/box1.webp',
+    imageFallback: '/camocrew/box1.jpg',
+    href: '/camocrew/',
+    store: 'https://play.google.com/store/apps/details?id=com.enclop.crewcamo',
   },
 ];
 
-export const ideas = [
-  { title: 'Gamified Learning App for Coding', votes: 62 },
-  { title: 'Community Skill-Sharing Platform', votes: 45 },
-  { title: 'AI-Powered Project Manager', votes: 28 },
-  { title: 'Eco-Friendly Tech Marketplace', votes: 15 },
-];
-
-export const builders = [
+export const pillars = [
   {
-    name: 'Aisha Sharma',
-    role: 'Lead React Developer',
-    avatar: 'https://placehold.co/100x100/0A0A0A/EAEAEA',
-    quote: 'I learned more in three months at Enclop than in two years of classes. Working on a real-world SaaS product was a complete game-changer for my resume.'
+    title: 'We build what we want to play',
+    body:
+      'Every project starts as an idea somebody on the team could not stop thinking about. If it does not make us want to open the editor at midnight, we do not make it.',
   },
   {
-    name: 'Ben Carter',
-    role: 'UI/UX Designer',
-    avatar: 'https://placehold.co/100x100/0A0A0A/EAEAEA',
-    quote: 'Enclop gave me the creative freedom to design an entire mobile app interface. The mentorship was incredible and it directly led to my first internship offer.'
-  }
+    title: 'We ship, we do not pitch',
+    body:
+      'Ideas are cheap. Camo Crew went from a prototype to a live Google Play release with real players in it. Shipped and imperfect beats polished and theoretical.',
+  },
+  {
+    title: 'Players tell us what is broken',
+    body:
+      'Bug reports and Discord messages go straight into the build. Frame rate on cheap phones, controls that feel wrong, a hiding spot nobody can reach — that is the roadmap.',
+  },
+  {
+    title: 'Small team, strange ideas',
+    body:
+      'No committee, no focus group. That is how you end up with a game where the core mechanic is painting yourself the colour of a haystack.',
+  },
 ];
