@@ -1,11 +1,1 @@
-# app-ads.txt — Enclop · Camo Crew (com.enclop.crewcamo)
-#
-# 2026-09-04: reduced to a single AdMob DIRECT line by request. The previous pub ID
-# (pub-1554356703107273) and Yodo1's 3,241-record seller list were both removed.
-# Buyers refuse bids from sellers not listed here, so this authorises only the
-# account below. To restore the full Yodo1 list:
-#   cd "3D Object/Enclope"
-#   git show 24449e5:client/public/app-ads.txt > client/public/app-ads.txt
-#   cd client && npx vercel deploy --prod --yes
-
 google.com, pub-7840683806543631, DIRECT, f08c47fec0942fa0
