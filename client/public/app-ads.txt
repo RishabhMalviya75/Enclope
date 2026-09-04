@@ -1,33 +1,11 @@
-# app-ads.txt — Enclop
-# Authorises which ad systems may sell inventory for our apps (IAB spec).
-# Apps covered: Camo Crew (com.enclop.crewcamo)
+# app-ads.txt — Enclop · Camo Crew (com.enclop.crewcamo)
 #
-# ⚠ EMPTIED 2026-09-04 BY EXPLICIT REQUEST. This file previously carried Yodo1's
-# full published seller list — 3,241 records covering AppLovin, Unity, Mintegral,
-# Liftoff, InMobi, Meta, Pangle, BidMachine, Bigo, Yandex, ironSource, DT/Fyber,
-# TopOn and Yodo1's own AdMob and GAM accounts. Only our own AdMob DIRECT line
-# below survives.
-#
-# WHAT THIS MEANS. Buyers read this file and refuse bids from any seller not
-# listed. Yodo1 mediates our ads and sells them through ITS accounts, including
-# its own AdMob accounts — not through our pub- ID below, which exists so AdMob
-# can verify the app. So with the list gone, Yodo1's demand is unauthorised and
-# fill is expected to collapse, not merely shrink. If ad revenue drops or the
-# account reports limited ad serving, this file is the first place to look.
-#
-# TO RESTORE — the full list is one command away:
-#   cd "3D Object/Enclope" && git show da7ce78lient/public/app-ads.txt > client/public/app-ads.txt
+# 2026-09-04: reduced to a single AdMob DIRECT line by request. The previous pub ID
+# (pub-1554356703107273) and Yodo1's 3,241-record seller list were both removed.
+# Buyers refuse bids from sellers not listed here, so this authorises only the
+# account below. To restore the full Yodo1 list:
+#   cd "3D Object/Enclope"
+#   git show 24449e5:client/public/app-ads.txt > client/public/app-ads.txt
 #   cd client && npx vercel deploy --prod --yes
-# Yodo1's canonical copy is https://yodo1.com/app-ads.txt (re-copy, keeping our
-# OWNERDOMAIN/MANAGERDOMAIN header lines below and dropping theirs).
 
-OWNERDOMAIN=enclop.com
-# Yodo1 MAS still monetises our apps on our behalf, so it remains the declared
-# manager. This line describes the business relationship and is not itself a
-# seller authorisation.
-MANAGERDOMAIN=yodo1.com
-
-# ── Google / AdMob (direct) ───────────────────────────────────────────────
-# The AdMob account that owns the app listing. AdMob crawls this file to verify
-# the app (Add stores to app → Verify app).
-google.com, pub-1554356703107273, DIRECT, f08c47fec0942fa0
+google.com, pub-7840683806543631, DIRECT, f08c47fec0942fa0
