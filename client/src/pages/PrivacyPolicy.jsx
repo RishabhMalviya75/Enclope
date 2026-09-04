@@ -36,6 +36,20 @@ export default function PrivacyPolicyPage() {
                     </motion.div>
                     <motion.h1 className="hero-title text-5xl md:text-6xl mb-4" variants={fadeInUp}>Privacy Policy</motion.h1>
                     <motion.p className="text-text-secondary" variants={fadeInUp}>Last updated: December 31, 2024</motion.p>
+                    {/* Scope. This page is the AGENCY policy for enclop.com and client
+                        services; it says we do not share data with third parties, which is
+                        true here and false for an ad-funded game. Without this banner a
+                        player arriving from the footer reads a direct contradiction of the
+                        Camo Crew policy that Play Console points at. */}
+                    <motion.div
+                        className="mx-auto mt-8 max-w-2xl rounded-xl border border-accent/40 bg-accent/10 px-5 py-4 text-sm text-text-secondary"
+                        variants={fadeInUp}
+                    >
+                        This policy covers the <strong className="text-white">enclop.com website and our
+                        client services</strong>. It does not govern our games. If you play{' '}
+                        <strong className="text-white">Camo Crew</strong>, the policy that applies to you is the{' '}
+                        <Link to="/camocrew/privacy" className="text-accent hover:underline">Camo Crew Privacy Policy</Link>.
+                    </motion.div>
                 </motion.div>
 
                 {/* Content */}

@@ -9,7 +9,7 @@ export const studio = {
   play: 'https://play.google.com/store/apps/details?id=com.enclop.crewcamo',
   discord: 'https://discord.com/invite/6DfUdzdFw',
   instagram: 'https://www.instagram.com/_enclop',
-  email: 'app.enclop@gmail.com',
+  email: 'enclop.app@gmail.com',
 };
 
 export const games = [

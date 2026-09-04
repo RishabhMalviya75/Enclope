@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollTop';
+import DocumentTitle from './components/DocumentTitle';
 
 import HomePage from './pages/HomePage';
 import GamesPage from './pages/GamesPage';
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <div className="relative flex min-h-screen w-full flex-col bg-base">
       <ScrollToTop />
+      <DocumentTitle />
       <Header />
 
       <main className="container mx-auto flex-1 px-6 pt-28 sm:pt-32">

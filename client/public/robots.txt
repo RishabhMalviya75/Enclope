@@ -1,0 +1,17 @@
+# robots.txt — enclop.com
+#
+# This file did not exist: the request fell through to the SPA's catch-all and
+# returned index.html with a 200, so every crawler asking for robots.txt got a
+# page of HTML. That is the same failure that made AdMob's crawler report
+# "your details don't match" for app-ads.txt and left the app in Limited ad
+# serving. Vercel serves real files in public/ before applying the rewrite.
+
+User-agent: *
+Allow: /
+
+# The legal pages are the ones that must stay crawlable and verifiable — they
+# are what Google Play and our ad partners check.
+Allow: /camocrew/privacy
+Allow: /camocrew/terms
+
+Sitemap: https://enclop.com/sitemap.xml

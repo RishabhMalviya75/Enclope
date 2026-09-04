@@ -33,7 +33,7 @@ export default function CamoCrewPrivacyPage() {
             <Section title="Who we are">
                 <p>
                     Enclop, India. Questions, requests and complaints:{' '}
-                    <a href="mailto:support@enclop.com" className="text-accent hover:underline">support@enclop.com</a>.
+                    <a href="mailto:enclop.app@gmail.com" className="text-accent hover:underline">enclop.app@gmail.com</a>.
                     We reply to privacy requests within 30 days.
                 </p>
             </Section>
@@ -114,7 +114,7 @@ export default function CamoCrewPrivacyPage() {
                     'In the EU, EEA, UK and Switzerland, the game asks for your consent before any personalised ad is served, using Google’s certified consent form. Refusing means you still see ads, but non-personalised ones.',
                     'You can change that answer at any time: Settings ▸ Privacy ▸ Ad Consent.',
                     'Anywhere in the world you can reset or delete your advertising ID in Android Settings ▸ Privacy ▸ Ads, which stops it being used to build a profile of you.',
-                    'If you are in a US state with an opt-out right, email support@enclop.com with the subject "Do not sell or share" and we will pass the signal to our ad partners.',
+                    'If you are in a US state with an opt-out right, email enclop.app@gmail.com with the subject "Do not sell or share" and we will pass the signal to our ad partners.',
                 ]} />
             </Section>
 
@@ -124,7 +124,7 @@ export default function CamoCrewPrivacyPage() {
                     it is not distributed under Google Play's Designed for Families programme. We do not knowingly
                     collect personal data from children, and the game is configured to tell our ad partners that its
                     audience is not child-directed. If you believe a child has given us data, email{' '}
-                    <a href="mailto:support@enclop.com" className="text-accent hover:underline">support@enclop.com</a>{' '}
+                    <a href="mailto:enclop.app@gmail.com" className="text-accent hover:underline">enclop.app@gmail.com</a>{' '}
                     and we will delete it.
                 </p>
             </Section>
@@ -151,7 +151,7 @@ export default function CamoCrewPrivacyPage() {
                 <p className="mb-4">Two routes, both free:</p>
                 <Bullets items={[
                     'In the game: Settings ▸ Privacy ▸ Delete My Data. Immediate.',
-                    'On the web, including after uninstalling: enclop.com/camocrew/delete-my-data, or email support@enclop.com with the subject "Delete my data".',
+                    'On the web, including after uninstalling: enclop.com/camocrew/delete-my-data, or email enclop.app@gmail.com with the subject "Delete my data".',
                 ]} />
                 <p className="mt-4">
                     Deletion erases your profile, display name, username, friends, device links and item ownership, and
@@ -164,7 +164,7 @@ export default function CamoCrewPrivacyPage() {
                 <p className="mb-4">
                     Depending on where you live you may have the right to access, correct, delete, port, or restrict
                     the processing of your data, to object to it, and to withdraw consent. Email{' '}
-                    <a href="mailto:support@enclop.com" className="text-accent hover:underline">support@enclop.com</a>{' '}
+                    <a href="mailto:enclop.app@gmail.com" className="text-accent hover:underline">enclop.app@gmail.com</a>{' '}
                     — we do not charge for this and we do not degrade the game for people who exercise these rights.
                     EEA/UK players may also complain to their local data protection authority.
                 </p>
@@ -191,7 +191,7 @@ export default function CamoCrewPrivacyPage() {
                     <p className="text-white font-semibold mb-2">Enclop — Camo Crew</p>
                     <p>
                         Email:{' '}
-                        <a href="mailto:support@enclop.com" className="text-accent hover:underline">support@enclop.com</a>
+                        <a href="mailto:enclop.app@gmail.com" className="text-accent hover:underline">enclop.app@gmail.com</a>
                     </p>
                     <p>
                         Terms:{' '}

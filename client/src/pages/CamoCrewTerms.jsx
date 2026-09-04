@@ -67,7 +67,7 @@ export default function CamoCrewTermsPage() {
                     We may reclaim a name, reset it, suspend an account, or ban it permanently — with or without
                     warning, in proportion to what happened. Bans forfeit any unspent coins and any items on the
                     account, and we do not refund them. If you think a ban was wrong, email{' '}
-                    <a href="mailto:support@enclop.com" className="text-accent hover:underline">support@enclop.com</a>{' '}
+                    <a href="mailto:enclop.app@gmail.com" className="text-accent hover:underline">enclop.app@gmail.com</a>{' '}
                     and a person will look at it.
                 </p>
             </Section>
@@ -96,7 +96,7 @@ export default function CamoCrewTermsPage() {
                     ads between matches and optional rewarded ads you choose to watch. Rewarded ads are always
                     opt-in and the reward is stated before you start. We do not control the content of individual ads —
                     if you see one that is offensive, deceptive or broken, report it via{' '}
-                    <a href="mailto:support@enclop.com" className="text-accent hover:underline">support@enclop.com</a>{' '}
+                    <a href="mailto:enclop.app@gmail.com" className="text-accent hover:underline">enclop.app@gmail.com</a>{' '}
                     with a screenshot and we will pass it to the network. Your choices about ad personalisation are in
                     the{' '}
                     <Link to="/camocrew/privacy" className="text-accent hover:underline">Privacy Policy</Link>.
@@ -155,7 +155,7 @@ export default function CamoCrewTermsPage() {
                 <p>
                     We will post changes here with a new date, and announce material changes in the game before they
                     take effect. Continuing to play after that means you accept them. Questions:{' '}
-                    <a href="mailto:support@enclop.com" className="text-accent hover:underline">support@enclop.com</a>.
+                    <a href="mailto:enclop.app@gmail.com" className="text-accent hover:underline">enclop.app@gmail.com</a>.
                 </p>
             </Section>
         </LegalPage>
